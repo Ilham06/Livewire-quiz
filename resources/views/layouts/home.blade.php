@@ -26,9 +26,9 @@
     
     @yield('content')
 
-    <footer>
+    {{-- <footer>
         <p class="text-center m-0 p-0">Created By <a href="https://github.com/ilham06">Ilham Muhamad</a>, With <i class="fas fa-heart"></i> From Trenggalek.</p>
-    </footer>
+    </footer> --}}
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

@@ -1,17 +1,18 @@
 <div>
-    <div class="container mt-5 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="card">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="card quiz-box shadow">
                     <div class="card-header">
-                        <div wire:ignore class="head d-flex justify-content-between">
-                            <p class="m-0">Pertanyaan ke {{ $question->number }}</p>
-                            <p class="m-0">Waktu Tersisa : <span class="timer"></span></p>
+                        <div class="head d-flex justify-content-between">
+                            <p class="m-0">Pertanyaan ke {{ $question->number }} Dari 3</p>
+                            <p wire:ignore class="m-0">Waktu Tersisa : <span class="timer"></span></p>
                         </div>
 
-                        <p class="mt-3 mb-0">{{ $question->body }}</p>
+                        
                     </div>
                     <div class="card-body">
+                        <p class="question mt-2 mb-3">{{ $question->body }}</p>
                         <form wire:submit.prevent="answer()" action="">
                             @foreach ($question->answers as $answer)
                             <div class="form-check">
@@ -23,9 +24,8 @@
                             @endforeach
                         </form>
                     </div>
-                    <div class="card-footer">
-                        <button wire:click="answer()" class="btn btn-success btn-sm mr-auto">Cek Answer</button>
-                        <button wire:click="next()" class="btn btn-primary btn-sm mr-auto">Next</button>
+                    <div class="card-footer text-right">
+                        <button wire:click="next()" class="btn btn-primary btn-sm">Next</button>
                     </div>
                 </div>
             </div>
@@ -34,14 +34,14 @@
 </div>
 @push('script')
     <script>
-        var time = 10;
+        var time = 120;
 
         window.livewire.on('answer', e => {
             alert(e['message'])
         });
 
         window.livewire.on('resetTimer', e => {
-           time = 10; 
+           time = 120; 
         });
 
         var el = document.querySelector('.timer')
@@ -56,6 +56,10 @@
                     var coundown = minute + ' menit ' + second + ' detik '
                 } else {
                     var coundown = time + ' detik'
+                }
+
+                if (time <= 10) {
+                    el.style.color = 'red'
                 }
 
                 el.textContent = coundown
