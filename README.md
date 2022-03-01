@@ -18,6 +18,6 @@ Cara Install
 - Jalankan Seeder (php artisan db:seed)
 - Jalankan Server (php artisan serve)
 
-<iframe src="https://drive.google.com/file/d/1HsVEKL0fxmf4yZY5C8quh2ddJTIgheXD/preview" width="640" height="480" allow="autoplay"></iframe>
+<img src="https://drive.google.com/uc?export=view&id=1HsVEKL0fxmf4yZY5C8quh2ddJTIgheXD"></img>
 
 Created By : Ilham Muhamad S
