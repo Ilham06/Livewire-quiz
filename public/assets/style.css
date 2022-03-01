@@ -7,9 +7,22 @@
 }
 
 body {
+	position: relative;
 	background: #F1F2F3;
 	color: #39393A;
 	font-family: 'Poppins', sans-serif;
+}
+
+.w-500 {
+	font-weight: 500;
+}
+
+.w-600 {
+	font-weight: 600;
+}
+
+.w-700 {
+	font-weight: 700;
 }
 
 .card-header, .card-footer {
@@ -17,7 +30,7 @@ body {
 }
 
 .quiz-box {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .question {
@@ -32,14 +45,15 @@ body {
 	padding: 10px;
 	margin: 10px auto;
 	transition: .2s;
+	cursor: pointer;
 }
 
 input[type='radio']:checked + .form-check-label {
-	background: #d9edf7;
+	background: #F1F2F3;
 }
 
 .form-check-label:hover {
-	background: #d9edf7;
+	background: #F1F2F3;
 }
 
 .form-check {
@@ -48,4 +62,11 @@ input[type='radio']:checked + .form-check-label {
 
 .form-check-input {
 	display: none;
+}
+
+ul li {
+	list-style: none;
+	line-height: 30px;
+	text-transform: capitalize;
+	font-weight: 500;
 }
