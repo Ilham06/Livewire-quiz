@@ -13,6 +13,10 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+p {
+	text-transform: capitalize;
+}
+
 .w-500 {
 	font-weight: 500;
 }

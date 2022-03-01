@@ -12,8 +12,8 @@
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li>1. Terdapat 10 Pertanyaan</li>
-                                <li>2. setiap pertanyaan diberi waktu 60 detik</li>
+                                <li>1. Terdapat {{ $questionCount }} Pertanyaan</li>
+                                <li>2. setiap pertanyaan diberi waktu {{ $countdown }} detik</li>
                                 <li>3. jika waktu habis, akan lanjut pertanyaan berikutnya</li>
                                 <li>4. tidak dapat kembali ke pertanyaan sebelumnya</li>
                                 <li>5. Benar +1, Salah / Tidak dijawab 0.</li>
@@ -57,7 +57,7 @@
                         <div class="card-body text-center">
                             <p class="m-0"> <span class="w-700">Quiz Selesai!</span> <br>Anda Mendapat Skor {{ $score }} Dari {{ $questionCount }}!.</p>
                         </div>
-                        <div class="card-footer text-center">
+                        <div class="card-footer text-center border-0">
                             <button wire:click="restart()" class="btn btn-primary btn-sm">Mulai Ulanng</button>
                         </div>
                     </div>
